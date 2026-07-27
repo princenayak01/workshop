@@ -1,0 +1,8 @@
+{% extends 'base.html' %}{% block content %}
+<section class="hero"><div class="container py-5"><div class="row align-items-center min-vh-75"><div class="col-lg-7">
+  <span class="badge text-bg-info mb-3">Professional defensive security suite</span><h1 class="display-3 fw-bold">Assess, protect, and respond with confidence.</h1>
+  <p class="lead text-secondary">A full-stack toolkit for password hygiene, phishing triage, hashing, IP intelligence, email authentication review, and AES text encryption.</p>
+  <a href="/dashboard" class="btn btn-cyber btn-lg me-2">Open Dashboard</a><a href="/password-checker" class="btn btn-outline-light btn-lg">Start Scan</a>
+</div><div class="col-lg-5"><div class="orb"><i class="fa-solid fa-lock"></i></div></div></div>
+<div class="row g-4 mt-2">{% for icon,title,value in [('fa-key','Passwords','Strength + generation'),('fa-link','URLs','Phishing heuristics'),('fa-fingerprint','Files','MD5 / SHA1 / SHA256'),('fa-chart-line','Dashboard','Live SQLite analytics')] %}<div class="col-md-3"><div class="stat-card"><i class="fa-solid {{ icon }}"></i><h3>{{ title }}</h3><p>{{ value }}</p></div></div>{% endfor %}</div>
+</div></section>{% endblock %}
